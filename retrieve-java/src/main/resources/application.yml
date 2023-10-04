@@ -1,0 +1,40 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/retrieve?useUnicode=true&&characterEncoding=utf8&&useSSL=true
+    username: username  # 数据库用户名
+    password: password  # 数据库密码
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: Test
+    password: Test
+    virtual-host: /Test
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    connection-timeout: 60000
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    database: mysql
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 200MB
+      max-request-size: 200MB
+  elasticsearch:
+    uris: http://127.0.0.1:9200
+  data:
+    elasticsearch:
+      repositories:
+        enabled: false
+
+# 文件位置
+file:
+  location: /upload/filepath # 自定义上传文件本地保存路径
+  ip: 127.0.0.1 # 自定义Nginx IP

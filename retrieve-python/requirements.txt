@@ -1,0 +1,9 @@
+Pillow==9.5.0
+pyPDF2==2.12.1
+pika==1.3.2
+bs4==4.12.2
+frontend==0.0.3
+tqdm==4.66.1
+pdfplumber==0.10.2
+PyMuPDF==1.22.5
+easyocr==1.7.0
